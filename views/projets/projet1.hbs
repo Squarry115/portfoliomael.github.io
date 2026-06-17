@@ -1,0 +1,159 @@
+<main class="project-page">
+  <header class="project-hero">
+    <h1 class="project-title">Projet Mycoria</h1>
+  </header>
+
+  <div class="project-container">
+    <section class="project-main">
+      <div class="project-video">
+        
+          <div class="video-wrapper">
+            <video controls playsinline poster="{{videoPoster}}">
+              <source src="/images/Trailer.mp4" type="video/mp4" />
+              Ton navigateur ne supporte pas la balise vidéo.
+            </video>
+          </div>
+            <div class="video-wrapper">{{{videoIframe}}}</div>
+      </div>
+
+      <article class="project-body">
+        <h2 id="intro" style="color: var(--accent-purple);">Introduction</h2>
+        <div class="project-paragraph">
+          <p>"Projet Mycoria" est un jeu narratif développé sur Unreal Engine 5, basé sur le Livradois-Forez et réalisé en partenariat avec <a href="https://www.facebook.com/SemerenTerritoire/" style="font-style: italic;">Semer en Territoire</a>. Il s'agissait de notre projet final de première année et le but était de représenter une partie des communes et de l'histoire du Livradois-Forez. Le développement du projet s'est fait de décembre 2024 à Juin 2025, et avait pour thème (en plus du Livradois-Forez), le genre du steampunk</p>
+          <div class="project-image-wrapper">
+            <img src="/images/Image1.png" alt="Image du projet Mycoria" class="project-image" />
+          </div>
+        </div>
+        
+          <section id="section-1-1" class="project-section">
+            <h3>Synopsis</h3>
+            <p>Le jeu se passe dans des années 60 alternatives, où la technologie steampunk domine le paysage. La France connais un hiver d'un froid jamais vu auparavant. Et c'est dans ces conditions rudes qu'une étrange épidémie, similaire à la rage, se répend parmis les habitants du Livradois-Forez. Nous incarnons l'agent Vincent Morel de la DGSI, venu enquêter sur l'étrange infection et se déplacant à bord d'un train servant de base mobile.</p>
+          </section>
+           <section id="section-1-2" class="project-section">
+            <h3>Mon rôle</h3>
+            <p>J'étais responsable de la conception d'un système de dialogues complexe et d'un système d'objectifs en plus de l'écriture du scénario et des dialogues</p>
+          </section>
+          <section id="section-1-3" class="project-section missions-section">
+            <h3>Les Missions</h3>
+            {{#if missions}}
+              <ul class="missions-list">
+                {{#each missions}}
+                  <li class="mission-card">
+                    <div class="mission-header">
+                      <h4 class="mission-title">{{this.title}}</h4>
+                      {{#if this.period}}<span class="mission-period">{{this.period}}</span>{{/if}}
+                    </div>
+                    {{#if this.role}}<div class="mission-role">Rôle : {{this.role}}</div>{{/if}}
+                    <p class="mission-desc">{{this.description}}</p>
+                    {{#if this.tasks}}
+                      <ul class="mission-tasks">
+                        {{#each this.tasks}}<li class="mission-task">{{this}}</li>{{/each}}
+                      </ul>
+                    {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+            {{else}}
+              <ul class="missions-list">
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Mission 1 — Enquête et documentation</h4>
+                  </div>
+                  <div class="mission-role">Rôle : Conception & scripting</div>
+                  <p class="mission-desc">Réalisation du scénario, recueil des histoires locales et transformation en contenu narratif du jeu.</p>
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Collecte d'archives</li>
+                    <li class="mission-task">Rédaction du scénario</li>
+                  </ul>
+                </li>
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Mission 2 — Système de dialogues</h4>
+                  </div>
+                  <div class="mission-role">Rôle : Développeur principal dialogues</div>
+                  <p class="mission-desc">Conception et implémentation d'un système de dialogues à choix multiples avec conséquences.</p>
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Architecture des arbres</li>
+                    <li class="mission-task">Tests et intégration</li>
+                  </ul>
+                </li>
+              </ul>
+            {{/if}}
+            
+
+      </article>
+      <article class="project-body">
+        <h2 id="intro" style="color: var(--accent-purple);">Zoom sur une partie du projet Mycoria : le système de dialogue</h2>
+        <div class="project-paragraph" id="project-dialogue">
+          <p>Le système de dialogues du jeu, de par sa complexité, permettais beacoup de choses. Il permettais des dialogues à choix multiples, une grande flexibilité et des conséquences aux choix du Joueur. Cependant, de par sa complexité, la création d'un seul arbre de dialogue pouvait être très long.</p>
+          <div class="project-image-wrapper">
+            <img src="/images/Image2.png" alt="Image du projet Mycoria" class="project-image" />
+          </div>
+        </div>
+
+          <section id="section-2-1" class="project-section">
+            <h3 id="project-dialogue-1">Fonction d'ouverture de dialogues</h3>
+            <p>Le système commence par retirer les contrôles de déplacements du Joueur avant d'ouvrir un widget de dialgoue dans l'interface</p>
+            <img src="/images/Image3.png" alt="Image du projet Mycoria" class="project-image" />
+            <img src="/images/Image4.png" alt="Image du projet Mycoria" class="project-image" />
+          </section>
+           <section id="section-2-2" class="project-section">
+            <h3>Création d'un arbre de dialogue</h3>
+            <p>La création d'un arbre commence par la création d'un enfant de la classe dialogue originale (un enfant d'une classe est une classe qui hérite d'une autre et récupère toutes ses fonctionnalités) puis de la création d'un enfant d'un personnage non Joueur modèle</p>
+            <img src="/images/Image5.png" alt="Image du projet Mycoria" class="project-image" />
+            <p>On associe ensuite la classe dialogue enfant au personnage non Joueur correspondant</p>
+            <img src="/images/Image6.png" alt="Image du projet Mycoria" class="project-image" />
+            <p>et ensuite on peut créer l'arbre de dialogue à l'aide des fonctions de la classe mère. Ce qui donne...</p>
+            <img src="/images/Image7.png" alt="Image du projet Mycoria" class="project-image" />
+            <p>ça as l'air compliqué non ? Ne vous en faites pas je vais tout vous expliquer</p>
+          </section>
+          <section id="section-2-3" class="project-section">
+            <h3>Début de dialogue</h3>
+            <p>tout d'abord on commence par un bloc qui regarde sur quel arbre de dialogue nous nous trouvons, ce système permet d'avoir deux arbres et de changer d'arbre selon les choix du Joueur. Par exemple au début du jeu le personnage joueur peut parler à un vieil homme, si le joueur lui parle de manière malpolie, alors il seras coincé dans le deuxième arbre de dialogue et le vieux monsieux refuseras de lui adresser la parole, l'empêchant d'accéder à des informations sur l'histoire</p>
+            <img src="/images/Image8.png" alt="Image du projet Mycoria" class="project-image" />
+            <h3>Ajout bloc de dialogue</h3>
+            <p>Pour créer un dialogue, on as besoin de deux blocs, le bloc Adddialogue qui contient le nom de l'interlocuteur et le son texte. Et un tableau(Array) contenant les réponses possibles que le joueur peut donner.</p>
+            <img src="/images/Image9.png" alt="Image du projet Mycoria" class="project-image" />
+            <h3>Progression dans l'arbre</h3>
+            <p>Pour avancer le dialogue on auras besoins de deux autres blocs. Un bloc switch on enum_dialoguestate, qui vas détecter quand le joueur choisis un dialogue. Et un bloc switch_on_int qui vas choisir quel bloc de dialogue prendre selon le choix du joueur</p>
+            <h3>Fin de dialogue</h3>
+            <p>Pour finir un dialogue on ajoute après le dialogue de notre choix : un bloc Cleardialogueprogress qui remet à zero la progression et un bloc close conversation qui sort le joueur de l'interface de dialogues</p>
+            <img src="/images/Image10.png" alt="Image du projet Mycoria" class="project-image" />
+          </section>
+      </article>
+      <article class="project-body">
+        <h2 id="tools" style="color: var(--accent-purple);">Outils utilisés</h2>
+        <div class="project-paragraph">
+          <p>J'ai principalement utilisé Unreal engine 5 comme outil pour l'ensemble du projet, le seul autre "outil" que j'ai utilisé es le bloc-note pour écrire les dialgoues et la trame scénaristique</p>
+        </div>
+        <h2 id="conclusion" style="color: var(--accent-purple);">Conclusion</h2>
+        <div class="project-paragraph">
+          <p>Ce projet m'as permis de me familiariser avec Unreal Engine 5 et de developper mes compétences dessus. Il m'as aussi apris à travailler dans une équipé plus grande sur un projet plus conséquent.</p>
+    </section>
+
+    <aside class="project-aside" aria-label="Navigation des parties">
+      <nav class="project-nav">
+        <ul>
+          <li>
+            <a href="#intro">Présentation</a>
+            <ul class="sub-nav">
+              <li><a href="#section-1-1">Synopsis</a></li>
+              <li><a href="#section-1-2">Mon rôle</a></li>
+              <li><a href="#section-1-3">Les Missions</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#project-dialogue">Zoom sur le système de dialogue</a>
+            <ul class="sub-nav">
+              <li><a href="#section-2-1">Fonction d'ouverture de dialogues</a></li>
+              <li><a href="#section-2-2">Création d'un arbre de dialogue</a></li>
+              <li><a href="#section-2-3">Début / progression / fin</a></li>
+            </ul>
+          </li>
+          <li><a href="#tools">Outils utilisés</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</main>

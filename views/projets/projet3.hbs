@@ -1,0 +1,121 @@
+<main class="project-page">
+  <header class="project-hero">
+    <h1 class="project-title">Projet Vapeur</h1>
+  </header>
+
+  <div class="project-container">
+    <section class="project-main">
+      <div class="project-images">
+        <img src="/images/pageacceuil.png" alt="Vapeur - Page d'accueil" class="project-image" />
+      </div>
+
+      <article class="project-body">
+      <h2 id="intro" style="color: var(--accent-purple);">Introduction</h2>
+      <div class="project-paragraph">
+          <p>Le Projet Vapeur es un faux site de vente de jeux vidéos, faux dans le sens qu'il ne permettais pas réellement d'acheter des jeux. Il servait uniquement comme site pour gérer une base de données de jeux. Je l'avais développé dans le cadre d'un projet universitaire en développement web. Son développement s'est déroulé pendant la semaine du 10 au 17 décembre 2025</p>
+          <div class="project-image-wrapper">
+            <img src="/images/logovapeur.png" alt="Image du projet Vapeur" class="project-image" />
+          </div>            
+        </div>
+      <section id="section-1-1" class="project-section">
+            <h3>Mon rôle</h3>
+            <p>J'étais responsable de la conception et de la gestion de la base de données, ainsi que du développement de la logique de traitement des données pour le site.</p>
+          </section>
+        <section id="section-1-3" class="project-section missions-section">
+            <h3>Mon Travail</h3>
+            {{#if missions}}
+              <ul class="missions-list">
+                {{#each missions}}
+                  <li class="mission-card">
+                    <div class="mission-header">
+                      <h4 class="mission-title">{{this.title}}</h4>
+                      {{#if this.period}}<span class="mission-period">{{this.period}}</span>{{/if}}
+                    </div>
+                    {{#if this.role}}<div class="mission-role">Rôle : {{this.role}}</div>{{/if}}
+                    <p class="mission-desc">{{this.description}}</p>
+                    {{#if this.tasks}}
+                      <ul class="mission-tasks">
+                        {{#each this.tasks}}<li class="mission-task">{{this}}</li>{{/each}}
+                      </ul>
+                    {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+            {{else}}
+              <ul class="missions-list">
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Création d'une base de données</h4>
+                  </div>
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Création de la structure de la base</li>
+                    <li class="mission-task">Initialisation et génération des données</li>
+                  </ul>
+                </li>
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Architecture du site</h4>
+                  </div>
+                  
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Conception des pages web</li>
+                    <li class="mission-task">Rédaction de la logique de traitement des données</li>
+                  </ul>
+                </li>
+              </ul>
+            {{/if}}
+      </article>
+      <article class="project-body">
+        <h2 id="intro" style="color: var(--accent-purple);">Création et gestion de la base de données</h2>
+        <div class="project-paragraph" id="project-dialogue">
+          <p>La base de données du projet Vapeur a été conçue pour gérer efficacement les informations sur les jeux vidéo, les éditeurs et les différents genres de jeux. Elle permettait de stocker et de récupérer rapidement les données nécessaires pour le fonctionnement du site. La base de données s'initialisait automatiquement lors du lancement du site, et ce, afin d'éviter qu'elles soient stockées localement ou quand elles sont transférées.</p>
+        </div>
+      </article>
+      <section id="section-2-1" class="project-section">
+            <h3 id="project-dialogue-1">Formulaires de création</h3>
+            
+            <p>Le formulaire de création de jeu permet d'ajouter des information comme la date de sortie, le titre, la description et un lien vers l'image du jeu. Mais il permet aussi de choisir une genre ou un éditeur parmis ceux présents dans la base de données et de choisir si le jeu est mis-en-avant</p>
+            <img src="/images/formulairejeu.png" alt="formulaire de jeu" class="project-image" />
+            <p>L'ajout d'un genre ou éditeur se fait par un formulaire similaire à celui utilisé pour les jeux mais se limitant à une simple entrée texte.</p>
+            <img src="/images/formulaireediteur.png" alt="formulaire d'éditeur" class="project-image" />
+      </section>
+      <section id="section-2-2" class="project-section">
+            <h3 id="project-dialogue-2">Affichage des jeux</h3>
+            
+            <p>Les jeux mis-en-avant sont affichés sur la page d'accueil du site, tandis que les autres jeux sont accessibles via une page dédiée. Chaque jeu dispose d'une page individuelle affichant ses détails, y compris son titre, sa description, sa date de sortie, son genre et son éditeur.</p>
+            <img src="/images/pagejeu.png" alt="Page d'un jeu" class="project-image" />
+            <p>De plus, il es possible d'accéder à un formulaire pour modifier les informations d'un jeu existant.</p>
+      </section>
+      <section id="section-3-1" class="project-section">
+            <h3 id="project-dialogue-3">Outils utilisés</h3>
+            
+            <p>Je me suis servis de visual studio code comme IDE principal. La librairie dont je me suis servis pour la base de donnée es prisma, cette dernière étant, malgré ses limitations, simple d'utilisation et d'implémentation et suffisante pour mon utilisation. Et enfin je me suis servis de handlebars pour le rendu des pages HTML.</p>
+      </section>
+      <section id="section-4-1" class="project-section">
+            <h3 id="project-dialogue-4">Conclusion</h3>
+            <p>Ce projet m'as permis de développer mes compétences en gestion de base de données et en développement web. Même si le rendu final était très imparfait, la structure de la base de données étant très simple et archaïque et la présentation du site laissant à désirer, j'ai quand-même pût tirer des leçons importantes pour mes futures projets.</p>
+      </section>     
+    </section>
+    <aside class="project-aside" aria-label="Navigation des parties">
+      <nav class="project-nav">
+        <ul>
+          <li>
+            <a href="#intro">Introduction</a>
+            <ul class="sub-nav">
+              <li><a href="#section-1-1">Mon rôle</a></li>
+              <li><a href="#section-1-3">Mon Travail</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#project-dialogue">Base de données</a>
+            <ul class="sub-nav">
+              <li><a href="#section-2-1">Formulaires de création</a></li>
+              <li><a href="#section-2-2">Affichage des jeux</a></li>
+            </ul>
+          </li>
+          <li><a href="#section-3-1">Outils utilisés</a></li>
+          <li><a href="#section-4-1">Conclusion</a></li>
+        </ul>
+      </nav>
+    </aside>
+</main>

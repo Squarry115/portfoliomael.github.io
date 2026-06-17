@@ -1,0 +1,27 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,138,-192,0,4,6)">
+			<stop offset="0" stop-color="#444444"/>
+			<stop offset="1" stop-color="#222222"/>
+		</linearGradient>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,62,-160,0,20,62)">
+			<stop offset="0" stop-color="#dddddd"/>
+			<stop offset="1" stop-color="#aaaaaa"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1);stroke: #000000 } 
+		.s1 { fill: #333333 } 
+		.s2 { fill: #111111 } 
+		.s3 { fill: url(#g2) } 
+		.s4 { opacity: .15;fill: #eeeeee } 
+		.s5 { fill: #666666 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m12 6h176c4.42 0 8 3.58 8 8v122c0 4.42-3.58 8-8 8h-176c-4.42 0-8-3.58-8-8v-122c0-4.42 3.58-8 8-8z"/>
+	<path fill-rule="evenodd" class="s1" d="m23 16h154c1.66 0 3 1.34 3 3v28c0 1.66-1.34 3-3 3h-154c-1.66 0-3-1.34-3-3v-28c0-1.66 1.34-3 3-3z"/>
+	<path fill-rule="evenodd" class="s2" d="m32 24h40v18h-40z"/>
+	<path fill-rule="evenodd" class="s3" d="m24 62h152c2.21 0 4 1.79 4 4v54c0 2.21-1.79 4-4 4h-152c-2.21 0-4-1.79-4-4v-54c0-2.21 1.79-4 4-4z"/>
+	<path fill-rule="evenodd" class="s4" d="m28 74h144v6h-144z"/>
+	<path fill-rule="evenodd" class="s5" d="m36 36.6c-1.44 0-2.6-1.16-2.6-2.6 0-1.44 1.16-2.6 2.6-2.6 1.44 0 2.6 1.16 2.6 2.6 0 1.44-1.16 2.6-2.6 2.6z"/>
+	<path fill-rule="evenodd" class="s5" d="m164 36.6c-1.44 0-2.6-1.16-2.6-2.6 0-1.44 1.16-2.6 2.6-2.6 1.44 0 2.6 1.16 2.6 2.6 0 1.44-1.16 2.6-2.6 2.6z"/>
+</svg>

@@ -1,0 +1,136 @@
+<main class="project-page">
+    <header class="project-hero">
+        <h1 class="project-title">Inspecteur Saviendou</h1>
+    </header>
+
+    <div class="project-container">
+    <section class="project-main">
+      <div class="project-video">
+        
+          <div class="video-wrapper">
+            <video controls playsinline poster="{{videoPoster}}">
+              <source src="/images/trailersaviendou.mp4" type="video/mp4" />
+              Ton navigateur ne supporte pas la balise vidéo.
+            </video>
+          </div>
+            <div class="video-wrapper">{{{videoIframe}}}</div>
+      </div>
+
+      <article class="project-body">
+      <h2 id="intro" style="color: var(--accent-purple);">Introduction</h2>
+        <div class="project-paragraph">
+          <p>Inspecteur Saviendou est un jeu d'enquête loufoque se basant sur des décors à base d'images libres de droits et d'énigmes illogiques. Il s'agissait du projet universitaire final de ma deuxième année d'études à l'IUT du Puy-en-Velay. Le jeu que l'on devait faire étais à sujet libre mais avais une condition qui étais "l'inclusion", que ça soit dans des fonctionnalités d'accesibilités ou dans la représentation des personnages. Son développement s'est fait pendant une grande partie de l'année mais la soutenance s'est faite le 26 mars 2026</p>
+          <div class="project-image-wrapper">
+            <img src="/images/logoIS.png" alt="Image du projet Inspecteur Saviendou" class="project-image" />
+          </div>            
+        </div>
+        <section id="section-1-1" class="project-section">
+            <h3>Synopsis</h3>
+            <p>Inspecteur Saviendou est un jeu en point and click d'enquête où l'entièretée des assets sont faits à partir de montages de mauvaise qualité d'images libres de droits, de modèle 3d prérendus et très simples. Le tout consistant en un jeu d'enquêtes absurdes. Le but de chaques niveau était de trouver et combiner ensemble les bonnes preuves dans le but d'arriver à une "conclusion" au mieu évidente et au pire complètement incensée.</p>
+          </section>
+      <section id="section-1-2" class="project-section">
+            <h3>Mon rôle</h3>
+            <p>J'ai eu des responsabilités variées. Je me suis occupé de l'écriture des dialogues et enquêtes, la création des assets 2D et le système de bruis de pas.</p>
+          </section>
+          <section id="section-1-3" class="project-section missions-section">
+            <h3>Les Missions</h3>
+            {{#if missions}}
+              <ul class="missions-list">
+                {{#each missions}}
+                  <li class="mission-card">
+                    <div class="mission-header">
+                      <h4 class="mission-title">{{this.title}}</h4>
+                      {{#if this.period}}<span class="mission-period">{{this.period}}</span>{{/if}}
+                    </div>
+                    {{#if this.role}}<div class="mission-role">Rôle : {{this.role}}</div>{{/if}}
+                    <p class="mission-desc">{{this.description}}</p>
+                    {{#if this.tasks}}
+                      <ul class="mission-tasks">
+                        {{#each this.tasks}}<li class="mission-task">{{this}}</li>{{/each}}
+                      </ul>
+                    {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+            {{else}}
+              <ul class="missions-list">
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Mission 1 — Écriture du scénario</h4>
+                  </div>
+                  <div class="mission-role">Rôle : Scénariste et lead game designer</div>
+                  <p class="mission-desc">Ecriture des dialogues et conception des enquêtes et niveaux.</p>
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Ecriture et doublage des dialogues</li>
+                    <li class="mission-task">Création des enquêtes et niveaux</li>
+                  </ul>
+                </li>
+                <li class="mission-card">
+                  <div class="mission-header">
+                    <h4 class="mission-title">Mission 2 — Système de bruits de pas</h4>
+                  </div>
+                  <div class="mission-role">Rôle : Développeur</div>
+                  <p class="mission-desc">Recherche de sons libres de droits et implémentation d'un système de bruits de pas.</p>
+                  <ul class="mission-tasks">
+                    <li class="mission-task">Mixage de sons</li>
+                    <li class="mission-task">Codage du système de bruits de pas</li>
+                  </ul>
+                </li>
+              </ul>
+            {{/if}}
+      </article>
+      <article class="project-body">
+        <h2 id="intro" style="color: var(--accent-purple);">Zoom sur une partie du jeu : le système de bruits de pas</h2>
+        <div class="project-paragraph" id="project-dialogue">
+          <p>Le système de bruits de pas est relativement simple mais est assez flexible. Il était facile à adapter et modifier et permetter une plus grande variété de sons et une précision assez surprenante.</p>
+          <img src="/images/nv1.png" alt="Schéma du système de bruits de pas" class="project-image" />
+        </div>
+      </article>
+      <section id="section-2-1" class="project-section">
+            <h3 id="project-dialogue-1">Fonctionement du système de son</h3>
+            
+            <p>Initialement, le système de bruits de pas étais simple, il se contentais simplement de prendre un son de pas qu'il jouais en boucle quand le personnage se déplaçais. Cependant j'ai plus-tard amélioré ce système pour le rendre plus complet et moins répétitif.</p>
+            <img src="/images/audiostream.png" alt="formulaire de jeu" class="project-image" />
+            <p>Le son se joue à l'aide d'un script et d'un "AudioStreamPlayer", il s'agit d'un composant de Godot Engine servant à jouer des sons.</p>
+            
+      </section>
+      <section id="section-2-2" class="project-section">
+            <h3>Amélioration du système</h3>
+            <p>Le système de bruits de pas a été amélioré pour être plus complet et moins répétitif. Et ce par l'ajout d'un tableau de bruis de pas seul au lieu d'un seul son de pas continus qui se répétais. Mais avant ça j'ai dû découper le son que j'avais originellement en plusieurs son avec audacity</p>
+            <img src="/images/audacity.png" alt="Image du projet Mycoria" class="project-image" />
+            <p>Ensuite nous créons un array associé au personnage joueur dans lequel nous insérons les différents sons de pas.</p>
+            <img src="/images/arraysons.png" alt="Image du projet Mycoria" class="project-image" />
+            <p>Pour enfin pouvoir changer le code pour que chaque son sois aléatoire et différent à chaque pas.</p>
+          </section>
+      <section id="section-3-1" class="project-section">
+            <h3 id="project-dialogue-3">Outils utilisés</h3>            
+            <p>Je me suis servis du moteur de jeu Godot pour le développement et de audacity pour l'audio. La partie créations d'assets 2d s'est faite à l'aide de photopéa, un outil d'édition d'image en ligne gratuit.</p>
+      </section>
+      <section id="section-4-1" class="project-section">
+            <h3 id="project-dialogue-4">Conclusion</h3>
+            <p>Ce projet as n'as pas était une grande réussite malheureusement. Même si on as réussi au final à rendre un premier niveau fonctionnel. Dû as des soucis techniques on as pas vraiment plus en faire. Cependant celà m'as appris à maitriser de nouveaux outils et à travailler sur des projets plus longs</p>
+      </section>     
+    </section>
+    <aside class="project-aside" aria-label="Navigation des parties">
+      <nav class="project-nav">
+        <ul>
+          <li>
+            <a href="#intro">Introduction</a>
+            <ul class="sub-nav">
+              <li><a href="#section-1-1">Mon rôle</a></li>
+              <li><a href="#section-1-3">Mon Travail</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#project-dialogue">Base de données</a>
+            <ul class="sub-nav">
+              <li><a href="#section-2-1">Formulaires de création</a></li>
+              <li><a href="#section-2-2">Affichage des jeux</a></li>
+            </ul>
+          </li>
+          <li><a href="#section-3-1">Outils utilisés</a></li>
+          <li><a href="#section-4-1">Conclusion</a></li>
+        </ul>
+      </nav>
+    </aside>
+</main>

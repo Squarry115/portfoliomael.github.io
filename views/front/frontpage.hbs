@@ -1,0 +1,168 @@
+<main class="portfolio-main">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+	<section class="hero">
+		<div class="hero-inner">
+			<h1 class="page-title">Maël Macé</h1>
+			<p class="hero-sub">Développeur backend • Programmeur C++ • Technicien Informatique</p>
+			<p class="hero-cta">
+				<a href="#projects" class="btn">Voir mes projets</a>
+				<a href="#contact" class="btn btn-secondary">Me contacter</a>
+			</p>
+		</div>
+	</section>
+
+	<section id="about" class="about about-large">
+		<div class="about-inner">
+			<div class="about-text">
+				<h2>À propos</h2>
+				<p>Technicien Informatique basé dans le Puy-de-Dôme, je suis un grand passioné d'Informatique, que l'on parle de développement web en backend, de développement d'applications en C++ ou tout simplement de montage et réparation d'ordinateurs. Peu importe le sujet, je suis quelqu'un d'impliqué.</p>
+
+			</div>
+			<div class="about-visual" aria-hidden="true">
+				<img src="/images/logo.svg" alt="Portrait" class="about-portrait" />
+			</div>
+		</div>
+	</section>
+
+	<section id="skills" class="skills">
+		<h2>Outils et languages</h2>
+		<div class="glide skills-glide">
+			<div class="glide__track" data-glide-el="track">
+				<ul class="glide__slides">
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" />
+						</div>
+						<p>JavaScript</p>
+					</li>
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/nodejs-icon.svg" alt="Node.js" />
+						</div>
+						<p>Node.js / Express</p>
+					</li>
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/php-svgrepo-com.svg" alt="PHP" />
+						</div>
+						<p>SQL / PHP</p>
+					</li>
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/ISO_C++_logo.svg" alt="C++" />
+						</div>
+						<p>C++</p>
+					</li>
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/git-icon-logo-svgrepo-com.svg" alt="Git" />
+						</div>
+						<p>Git &amp; GitHub</p>
+					</li>
+					<li class="glide__slide skill-card">
+						<div class="skill-logo-wrapper">
+							<img class="skill-logo" src="/images/unreal-engine.svg" alt="UE5" />
+						</div>
+						<p>Unreal Engine 5</p>
+					</li>
+			</div>
+		</section>
+
+		<section id="soft-skills" class="soft-skills">
+			<h2>Compétences humaines</h2>
+			{{#if softSkills}}
+			<ul class="soft-skill-list">
+				{{#each softSkills}}
+				<li class="soft-skill-card">
+						<div class="soft-skill-content">
+						<h3>{{this.name}}</h3>
+						<p>{{this.description}}</p>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+			{{else}}
+			<ul class="soft-skill-list">
+				<li class="soft-skill-card">
+					<div class="soft-skill-content">
+						<h3>Écoute</h3>
+						<p>Capacité à écouter activement les besoins et retours des utilisateurs et collègues.</p>
+					</div>
+				</li>
+				<li class="soft-skill-card">
+					<div class="soft-skill-content">
+						<h3>Communication</h3>
+						<p>Savoir transmettre idées et solutions de manière claire à une équipe ou un client.</p>
+					</div>
+				</li>
+				<li class="soft-skill-card">
+					<div class="soft-skill-content">
+						<h3>Analyse</h3>
+						<p>Savoir analyser les demandes d'un cahier des charges et établir un plan adapté.</p>
+					</div>
+				</li>
+				<li class="soft-skill-card">
+					<div class="soft-skill-content">
+						<h3>Travail en équipe</h3>
+						<p>Collaborer efficacement avec d'autres développeurs sur des projets de longue durée.</p>
+					</div>
+				</li>
+			</ul>
+			{{/if}}
+		</section>
+	<section id="projects" class="projects">
+		<h2>Mes Projets</h2>
+		<ul class="project-grid">
+			<li class="project-card">
+				<img src="/images/image1.png" alt="Project 1" />
+				<h3>Projet Mycoria</h3>
+				<p>Un jeu naratif sur Unreal Engine 5 basé sur Livradois-Forez et fait en partenariat avec semer en territoire.</p>
+				<p class="card-actions"><span class="project-price">Gratuit</span><a href="/project1" class="btn-view">Voir</a></p>
+			</li>
+
+			<li class="project-card">
+				<img src="/images/nv1.png" alt="Project 2" />
+				<h3>Inspecteur Saviendou</h3>
+				<p>Jeu d'enquête loufoque se basant sur des décors à base d'images libres de droits et d'énigmes illogiques.</p>
+				<p class="card-actions"><span class="project-price">Gratuit</span><a href="/projet2" class="btn-view">Voir</a></p>
+			</li>
+
+			<li class="project-card">
+				<img src="/images/logovapeur.png" alt="Project 3" />
+				<h3>Projet vapeur</h3>
+				<p>Faux site de ventes de jeux vidéos .</p>
+				<p class="card-actions"><span class="project-price">Gratuit</span><a href="/projet3" class="btn-view">Voir</a></p>
+			</li>
+		</ul>
+	</section>
+
+    <section id="responsible" class="responsible" aria-label="Numérique responsable">
+			<style>
+				.responsible{margin:2.5rem 0;padding:1.25rem;border-radius:12px;background:linear-gradient(180deg,#153d1f,#23332a);border:1px solid rgba(47,122,62,0.08)}
+				.responsible-inner{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap}
+				.resp-badge{width:84px;height:84px;border-radius:12px;background:linear-gradient(180deg,#7fcf8a,#5fb36a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.4rem;box-shadow:0 8px 20px rgba(47,122,62,0.12)}
+				.resp-content h2{color:#82bb8e;margin:0 0 .25rem}
+				.resp-content p{margin:.25rem 0;color:#74ca87}
+				.resp-list{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.5rem}
+				.resp-pill{background:#fff;border:1px solid rgba(47,122,62,0.08);padding:.45rem .65rem;border-radius:999px;color:#2f7a3e;font-size:.95rem}
+				@media (max-width:680px){.responsible-inner{flex-direction:column;align-items:flex-start}.resp-badge{width:64px;height:64px}}
+			</style>
+			<div class="responsible-inner">
+				<div class="resp-badge" aria-hidden="true">🌱</div>
+				<div class="resp-content">
+					<h2>Numérique responsable</h2>
+					<p>Lors de ma formation, j'ai appris à intégrer des pratiques de numérique responsable dans mes différents projets informatiques et web à travers plusieurs points.</p>
+					<div class="resp-list">
+						<span class="resp-pill">Images optimisées</span>
+						<span class="resp-pill">Limitation des animations</span>
+						<span class="resp-pill">Design accessible</span>
+						<span class="resp-pill">Polices lisibles</span>
+						<span class="resp-pill">Recyclage de composants électroniques</span>
+						<span class="resp-pill">Hébergement écologique</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="contact" ></div>
+</main>
